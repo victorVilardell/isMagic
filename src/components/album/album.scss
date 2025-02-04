@@ -1,0 +1,40 @@
+.album {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    padding: 0;
+    width: 24%;
+    box-sizing: content-box;
+    display: flex;
+    div {
+      position: relative;
+      img {
+        margin: 0 auto;
+      }
+      .heart-icon {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border: none;
+        border-radius: 50%;
+        padding: 4px;
+        width: 30px;
+        height: 30px;
+        box-shadow: 0px 4px 11px -3px rgba(0, 0, 0, 0.75);
+        &:hover {
+          filter: brightness(85%);
+        }
+      }
+    }
+  }
+}

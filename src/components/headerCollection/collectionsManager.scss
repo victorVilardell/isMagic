@@ -1,0 +1,34 @@
+.collections {
+  display: flex;
+  align-items: center;
+  .styled-select {
+    border-bottom: 1px solid white;
+    height: 29px;
+    overflow: hidden;
+    width: 180px;
+    margin: 0 16px 0 0;
+  }
+
+  .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    width: 180px;
+    color: white;
+  }
+
+  ul {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+      cursor: pointer;
+      padding: 0 8px 0 0;
+      vertical-align: baseline;
+    }
+  }
+}
