@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Collection Management Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application for managing card collections. It allows users to create, rename, delete, and view collections of cards, as well as add and remove cards from collections.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **IndexedDB**: A low-level API for client-side storage of significant amounts of structured data.
+- **Jest**: A testing framework for JavaScript.
+- **React Testing Library**: A library for testing React components.
 
-### `npm start`
+## Folder Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project folder structure is as follows:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+victorVilardell
+reescribe en ingles el README.md Explicando la tecnologia del proyecto , las librerias utilizadas, la estructura de carpetas y como inicial el proyecto
 
-### `npm test`
+GitHub Copilot
+Sure, here is the README.md rewritten in English:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Folder Structure
 
-### `npm run build`
+victor-vilardell ├── src/ │ ├── App.tsx │ ├── components/ │ │ ├── album/ │ │ │ ├── Album.tsx │ │ │ ├── Album.scss │ │ ├── headerCollection/ │ │ │ ├── Collections.tsx │ │ │ ├── Collections.scss │ │ ├── navSets/ │ │ │ ├── NavSets.tsx │ │ │ ├── NavSets.scss │ ├── context/ │ │ ├── CollectionsContext.tsx │ ├── services/ │ │ ├── cards/ │ │ │ ├── getCardsBySet.ts │ │ ├── database/ │ │ │ ├── databaseService.ts │ │ │ ├── indexedDB.ts │ │ ├── sets/ │ │ │ ├── types/ │ │ │ │ ├── setsType.ts │ ├── shared/ │ │ ├── utilities/ │ │ │ ├── getCollectionIds.ts │ ├── App.scss │ ├── index.tsx ├── tests/ │ ├── databaseService.test.ts │ ├── App.test.tsx ├── .nvmrc ├── jest.config.js ├── package.json └── README.md
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Functionality
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Create Collection**: Allows the user to create a new card collection.
+- **Rename Collection**: Allows the user to rename an existing collection.
+- **Delete Collection**: Allows the user to delete an existing collection.
+- **View Collection**: Allows the user to view all cards in a collection.
+- **Add Card**: Allows the user to add a card to a collection.
+- **Remove Card**: Allows the user to remove a card from a collection.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How It Works
 
-### `npm run eject`
+1. **App.tsx**: The main component of the application. Manages the state of collections and cards, and renders the main components.
+2. **CollectionsContext.tsx**: Provides a context for managing the state of collections and selected cards.
+3. **databaseService.ts**: Provides functions to interact with IndexedDB, including creating, renaming, deleting, and retrieving collections and cards.
+4. **indexedDB.ts**: Handles direct interaction with IndexedDB.
+5. **getCardsBySet.ts**: Provides functions to get cards by set from an external API.
+6. **getCollectionIds.ts**: Utility to get the IDs of cards in a collection.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## How to Start the Project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Node.js**: Make sure you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Installation
 
-## Learn More
+1. Clone the repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install the dependencies:
+
+Running the Project
+To start the application in development mode, run:
+
+This will start the application at http://localhost:3000.
+
+Running Tests
+To run the tests, use the following command:
+
+This will run the tests using Jest and React Testing Library.
