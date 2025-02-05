@@ -12,17 +12,41 @@ This project is a web application for managing card collections. It allows users
 
 ## Folder Structure
 
-The project folder structure is as follows:
-
-victorVilardell
-reescribe en ingles el README.md Explicando la tecnologia del proyecto , las librerias utilizadas, la estructura de carpetas y como inicial el proyecto
-
-GitHub Copilot
-Sure, here is the README.md rewritten in English:
-
-## Folder Structure
-
-victor-vilardell ├── src/ │ ├── App.tsx │ ├── components/ │ │ ├── album/ │ │ │ ├── Album.tsx │ │ │ ├── Album.scss │ │ ├── headerCollection/ │ │ │ ├── Collections.tsx │ │ │ ├── Collections.scss │ │ ├── navSets/ │ │ │ ├── NavSets.tsx │ │ │ ├── NavSets.scss │ ├── context/ │ │ ├── CollectionsContext.tsx │ ├── services/ │ │ ├── cards/ │ │ │ ├── getCardsBySet.ts │ │ ├── database/ │ │ │ ├── databaseService.ts │ │ │ ├── indexedDB.ts │ │ ├── sets/ │ │ │ ├── types/ │ │ │ │ ├── setsType.ts │ ├── shared/ │ │ ├── utilities/ │ │ │ ├── getCollectionIds.ts │ ├── App.scss │ ├── index.tsx ├── tests/ │ ├── databaseService.test.ts │ ├── App.test.tsx ├── .nvmrc ├── jest.config.js ├── package.json └── README.md
+victor-vilardell
+├── src/
+│ ├── App.tsx
+│ ├── components/
+│ │ ├── album/
+│ │ │ ├── Album.tsx
+│ │ │ ├── Album.scss
+│ │ ├── headerCollection/
+│ │ │ ├── Collections.tsx
+│ │ │ ├── Collections.scss
+│ │ ├── navSets/
+│ │ │ ├── NavSets.tsx
+│ │ │ ├── NavSets.scss
+│ ├── context/
+│ │ ├── CollectionsContext.tsx
+│ ├── services/
+│ │ ├── cards/
+│ │ │ ├── getCardsBySet.ts
+│ │ ├── database/
+│ │ │ ├── databaseService.ts
+│ │ │ ├── indexedDB.ts
+│ │ ├── sets/
+│ │ │ ├── types/
+│ │ │ │ ├── setsType.ts
+│ ├── shared/
+│ │ ├── utilities/
+│ │ │ ├── getCollectionIds.ts
+│ ├── App.scss
+│ ├── index.tsx
+├── tests/
+│ ├── databaseService.test.ts
+├── .nvmrc
+├── jest.config.js
+├── package.json
+└── README.md
 
 ## Functionality
 
