@@ -12,40 +12,14 @@ This project is a web application for managing card collections. It allows users
 
 ## Folder Structure
 
-victor-vilardell
+.
 ├── src/
 │ ├── App.tsx
 │ ├── components/
-│ │ ├── album/
-│ │ │ ├── Album.tsx
-│ │ │ ├── Album.scss
-│ │ ├── headerCollection/
-│ │ │ ├── Collections.tsx
-│ │ │ ├── Collections.scss
-│ │ ├── navSets/
-│ │ │ ├── NavSets.tsx
-│ │ │ ├── NavSets.scss
 │ ├── context/
-│ │ ├── CollectionsContext.tsx
 │ ├── services/
-│ │ ├── cards/
-│ │ │ ├── getCardsBySet.ts
-│ │ ├── database/
-│ │ │ ├── databaseService.ts
-│ │ │ ├── indexedDB.ts
-│ │ ├── sets/
-│ │ │ ├── types/
-│ │ │ │ ├── setsType.ts
 │ ├── shared/
-│ │ ├── utilities/
-│ │ │ ├── getCollectionIds.ts
-│ ├── App.scss
-│ ├── index.tsx
 ├── tests/
-│ ├── databaseService.test.ts
-├── .nvmrc
-├── jest.config.js
-├── package.json
 └── README.md
 
 ## Functionality
