@@ -12,14 +12,14 @@ This project is a web application for managing card collections. It allows users
 
 ## Folder Structure
 
-.
-├── src/
-│ ├── App.tsx
-│ ├── components/
-│ ├── context/
-│ ├── services/
-│ ├── shared/
-├── tests/
+.  
+├── src/  
+│ ├── App.tsx  
+│ ├── components/  
+│ ├── context/  
+│ ├── services/  
+│ ├── shared/  
+├── tests/  
 └── README.md
 
 ## Functionality
