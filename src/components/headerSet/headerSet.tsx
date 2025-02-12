@@ -1,5 +1,8 @@
-const headerSet = ({ setSelectedTitle }: { setSelectedTitle: string }) => {
-  return <h2>{setSelectedTitle}</h2>;
+import { useSetCards } from "../../context/SetCardsContext";
+
+const HeaderSet = () => {
+  const { titleSet } = useSetCards();
+  return <h2>{titleSet}</h2>;
 };
 
-export default headerSet;
+export default HeaderSet;

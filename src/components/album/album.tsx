@@ -1,18 +1,16 @@
-import * as Scry from "scryfall-sdk";
 import "./album.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faHeartRegular } from "@fortawesome/free-regular-svg-icons";
 import { faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
 import { useCollections } from "../../context/CollectionsContext";
+import { useSetCards } from "../../context/SetCardsContext";
 
-const Album = ({
-  cards,
-  onHandleClick,
-}: {
-  cards: Scry.Card[];
-  onHandleClick: (card: Scry.Card) => {};
-}) => {
-  const { selectedCards } = useCollections();
+const Album = () => {
+  const { selectedCards, togglingCardAndRefresh } = useCollections();
+  const { cards } = useSetCards();
+
+  console.log("CARTAS", cards);
+
   return (
     <ul className="album">
       {cards.map((card) => (
@@ -23,7 +21,10 @@ const Album = ({
               alt={card.name}
               title={card.name}
             />
-            <button className="heart-icon" onClick={() => onHandleClick(card)}>
+            <button
+              className="heart-icon"
+              onClick={() => togglingCardAndRefresh(card)}
+            >
               <FontAwesomeIcon
                 icon={
                   selectedCards.includes(card.id)

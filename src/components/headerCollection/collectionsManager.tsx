@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCollections } from "../../context/CollectionsContext";
+import { useToast } from "../../context/ToastContext";
 import {
   faPlusSquare,
   faEdit,
@@ -7,17 +8,18 @@ import {
   faTrashAlt,
 } from "@fortawesome/free-regular-svg-icons";
 import "./collectionsManager.scss";
-import { deleteCollection } from "../../services/database/databaseService";
 
 const Collections = () => {
   const {
     collections,
-    setCollections,
     selectedCollection,
     changeSelectedCollection,
     addNewCollection,
     setNewCollectionName,
+    deleteCollectionByName,
   } = useCollections();
+
+  const { showToast } = useToast();
 
   const handleCollectionChange = (
     event: React.ChangeEvent<HTMLSelectElement>
@@ -28,20 +30,49 @@ const Collections = () => {
   const handleAddNewCollection = () => {
     const newCollection = window.prompt("Add the name of a new collection:");
     if (newCollection !== null) {
-      addNewCollection(newCollection);
+      try {
+        addNewCollection(newCollection);
+        showToast("Collection created successfully", "success");
+      } catch (error) {
+        showToast(
+          error instanceof Error
+            ? error.message
+            : "Unknown error creating collection",
+          "error"
+        );
+      }
     }
   };
 
   const handleRenamingCollection = async () => {
     const nameCollection = window.prompt("Add the name of a new collection:");
     if (nameCollection !== null) {
-      setNewCollectionName(nameCollection);
+      try {
+        setNewCollectionName(nameCollection);
+        showToast("Collection renamed successfully", "success");
+      } catch (error) {
+        showToast(
+          error instanceof Error
+            ? error.message
+            : "Unknown error renaming collection",
+          "error"
+        );
+      }
     }
   };
 
   const handleDeleteCollection = async () => {
-    const availableCollections = await deleteCollection(selectedCollection);
-    await setCollections(availableCollections);
+    try {
+      await deleteCollectionByName(selectedCollection);
+      showToast("Collection deleted successfully", "success");
+    } catch (error) {
+      showToast(
+        error instanceof Error
+          ? error.message
+          : "Unknown error deleting collection",
+        "error"
+      );
+    }
   };
 
   return (
